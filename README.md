@@ -5,10 +5,15 @@ Logs can be serialized as json record to file or save to Amazon DynamoDB databas
 
 ## How to install on Amazon infrastructure
 
+### Create table in DynamoDB
+Create table with index on
+Hash key: content
+Primary Range Key: session
+
 
 ### Create EC2 instance with Ubuntu image
 Select 64 bits version. And remember to allow HTTP access.
-When the server is ready connect to it with ssh connection.
+When server is ready connect to it using ssh.
 While connected to the server
 
 
