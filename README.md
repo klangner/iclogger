@@ -45,7 +45,7 @@ Install Flask python library
 sudo pip install flask
 ```
 
-Create config file for boto library with authorization keys in ~/.boto file.
+Create config file for boto library with authorization keys in /etc/boto.cfg.
 Example:
 ```ini
 [Credentials]
@@ -61,6 +61,13 @@ cp example_settings.py settings.py
 vim settings.py
 ```
 Using vim editor change TABLE_NAME to table you created on DynamoDB.
+
+Configure apache to point to iclogger.wsgi
+
+Now you you can try to open page:
+<ec2>.amazonaws.com/?content=test&session=1&event=12
+
+And check if there is a new row in dynamoDB table.
 
 
 
