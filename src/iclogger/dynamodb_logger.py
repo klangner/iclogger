@@ -16,10 +16,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def log():
-#     timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-#     data = {'created_at':timestamp}
-#     for key in request.args:
-#         data[key] = request.args.get(key, "")
-#     table = Table(TABLE_NAME)
-#     table.put_item(data)
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    data = {'created_at':timestamp}
+    for key in request.args:
+        data[key] = request.args.get(key, "")
+    table = Table(TABLE_NAME)
+    table.put_item(data)
     return ""
