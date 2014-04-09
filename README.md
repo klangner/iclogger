@@ -30,6 +30,7 @@ sudo apt-get install git
 Install apache2
 ```sh
 sudo apt-get install apache2
+apt-get install libapache2-mod-wsgi
 ```
 
 Check if apache is working correctly be visiting your server with web browser. You should get apache2 default page with message: It works!
@@ -51,6 +52,17 @@ Example:
 aws_access_key_id = <your access key>
 aws_secret_access_key = <your secret key>
 ```
+
+Prepare iclogger application
+```sh
+git clone https://github.com/klangner/iclogger.git
+cd iclogger/src/iclogger
+cp example_settings.py settings.py
+vim settings.py
+```
+Using vim editor change TABLE_NAME to table you created on DynamoDB.
+
+
 
 
 
