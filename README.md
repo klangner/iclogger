@@ -3,38 +3,49 @@
 This is server application for logging events from client applications. 
 Logs can be serialized as json record to file or save to Amazon DynamoDB database.
 
-## How to install
-
-This application can be installed on any server with:
-* Python ver. >= 2.7
-* Apache2 or any other server with WSGI support
+## How to install on Amazon infrastructure
 
 
-### Install file logger
+### Create EC2 instance with Ubuntu image
+Select 64 bits version. And remember to allow HTTP access.
+When the server is ready connect to it with ssh connection.
+While connected to the server
 
-* Install Flask
-* Install json library
 
-
-### Install DynamoDB logger on EC2
-
-1. Create EC2 instance with Ubuntu image
-
-2. Update package manager
+Update package manager
 ```sh
 sudo apt-get update
 ```
 
-3. Install git
+Install git
 ```sh
 sudo apt-get install git
 ```
 
-4. Install apache2
+Install apache2
 ```sh
 sudo apt-get install apache2
 ```
-* Install Flask
-* Install boto library
-* Create authorization keys
+
+Check if apache is working correctly be visiting your server with web browser. You should get apache2 default page with message: It works!
+
+Install Python pip tool
+```sh
+sudo apt-get install python-pip
+```
+
+Install Flask python library
+```sh
+sudo pip install flask
+```
+
+Create config file for boto library with authorization keys in ~/.boto file.
+Example:
+```ini
+[Credentials]
+aws_access_key_id = <your access key>
+aws_secret_access_key = <your secret key>
+```
+
+
 
