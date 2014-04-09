@@ -1,0 +1,5 @@
+Version 0.1
+-----------
+
+* Log events to file
+* Logs events to Amazon DynamoDB
