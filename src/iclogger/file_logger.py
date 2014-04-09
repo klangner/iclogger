@@ -11,7 +11,7 @@ import json
 import os
 from flask import Flask
 from flask import request
-from iclogger.settings import FILE_STORAGE
+from iclogger.example_settings import FILE_STORAGE
 
 app = Flask(__name__)
 

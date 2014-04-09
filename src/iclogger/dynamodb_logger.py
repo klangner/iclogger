@@ -9,7 +9,7 @@ This logger saves the information into Amazon DynamoDB datastore.
 import datetime
 from flask import Flask
 from flask import request
-from iclogger.settings import TABLE_NAME
+from iclogger.example_settings import TABLE_NAME
 from boto.dynamodb2.table import Table
 
 app = Flask(__name__)
